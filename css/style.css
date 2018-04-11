@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: stayOutside;
+    src: url("../fonts/Stay-Outside-1.otf") format("truetype"),
+        url("../fonts/Stay-Outside-1.ttf") format("ttf");
+    font-weight: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#slide0 h1 {
+    font-family: "stayOutside";
+    font-size: 10vw;
+    font-weight: lighter;
+}
+
+#slide0 img {
+    margin-top: 30px;
+    width: 25px;
+}
+
+#slide0 p {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#slide0 section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    overflow: hidden;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#slide {
+    width: 900%;
+    position: relative;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    transition: all 1.5s ease;
+    height: auto;
+    display: flex;
+}
+
+.scrolling-wrapper-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  overflow-y: hidden;
+  padding: 30px 0;
+}  
+
+#fond1 {
+  display: block;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/cosmos-1845140_1920.jpg) repeat center center;
+  background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 3s ease-out;
+    transform: scale(1.05);
+}  
+
+#fond2 {
+  display: block;
+  overflow: hidden;
+  width: 900%;
+  height: 100vh;
+  background: url(../img/fond2.png) repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s ease-out;
+}  
+
+ #slide .card {
+    flex: 0 0 auto;
+    width: 100%;
+    margin: 0 auto;
+    background: url(../img/fond1.png) repeat center center;
+    /*background-size: cover;*/
+  }
+
+section {
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section .contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card section h2 {
+    margin-bottom: 5vh;
+}
+
+.card section .contain p {
+    margin-top: 10px;
+}
+
+.card section .contain p:last-child {
+    margin-top: 25px
+}
+
+.card section article,
+.card section aside {
+    width: 45%;
+}
+
+.card section aside img {
+    width: 100%;
+}
+
+.systemeSolaire {
+    position: relative;
+    width: 100%;
+}
+
+#Planetes {
+    position: relative;
+    left: 0;
+    height: 100%; 
+}
+
+#Planetes #titrePlanetes {
+    text-align: center;
+}
+
+#Planetes img {
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+#Planetes #mercure {
+    left: calc(50% - 6px);
+    top: calc(50% - 6px);
+    animation: rotationMercure 20s linear infinite running;
+    width: 12px;
+    height: auto;
+}
+
+#Planetes #venus,
+#Planetes #terre,
+#Planetes #mars {
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    width: 20px;
+    height: auto;
+}
+
+#Planetes #venus {
+    animation: rotationVenus 30s linear infinite running;
+}
+
+#Planetes #terre {
+    animation: rotationTerre 40s linear infinite running;
+}
+
+#Planetes #mars {
+    animation: rotationMars 60s linear infinite running;
+}
+
+#Planetes #jupiter {
+    left: calc(50% - 35px);
+    top: calc(50% - 35px);
+    width: 70px;
+    height: auto;
+    animation: rotationJupiter 80s linear infinite running;
+}
+
+#Planetes #saturne {
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: auto;
+    animation: rotationSaturne 100s linear infinite running;
+}
+
+
+#Planetes #uranus,
+#Planetes #neptune {
+    left: calc(50% - 30px);
+    top: calc(50% - 30px);
+    width: 60px;
+    height: auto;
+}
+
+#Planetes #uranus {
+    animation: rotationUranus 120s linear infinite running;
+}
+
+#Planetes #neptune {
+    animation: rotationNeptune 140s linear infinite running;
+}
+
+#Planetes #soleil {
+    left: calc(50% - 175px);
+    top: calc(50% - 175px);
+    width: 350px;
+    height: auto;
+}
+
+
+
+@keyframes rotationMercure {
+	from {
+		transform: rotate(0deg)
+		           translate(170px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(170px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationVenus {
+	from {
+		transform: rotate(0deg)
+		           translate(-200px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-200px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationTerre {
+	from {
+		transform: rotate(0deg)
+		           translateY(240px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translateY(240px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationMars {
+	from {
+		transform: rotate(0deg)
+		           translateY(-260px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translateY(-260px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationJupiter {
+	from {
+		transform: rotate(0deg)
+		           translate(350px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(350px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationSaturne {
+	from {
+		transform: rotate(0deg)
+		           translate(-500px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-500px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationUranus {
+	from {
+		transform: rotate(0deg)
+		           translateY(-650px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translateY(-650px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes rotationNeptune {
+	from {
+		transform: rotate(0deg)
+		           translate(750px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(750px) 
+		           rotate(-360deg);
+	}
+}
